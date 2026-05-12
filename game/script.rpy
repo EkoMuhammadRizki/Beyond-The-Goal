@@ -8,7 +8,16 @@ label start:
     # Opening Cinematic
     call opening_cinematic
     
-    # Main Menu akan muncul otomatis
+    # Langsung mulai Chapter 1
+    call chapter_1
+    
+    # Setelah Chapter 1, lanjut ke Chapter 2
+    call chapter_2
+    
+    # Setelah Chapter 2, lanjut ke Chapter 3
+    call chapter_3
+    
+    # Setelah semua chapter selesai, kembali ke main menu
     return
 
 # ============================================
@@ -50,27 +59,6 @@ label opening_cinematic:
     hide text with dissolve
     
     return
-
-# ============================================
-# CHAPTER SELECTION HUB
-# ============================================
-label chapter_select:
-    scene bg_school_field with fade
-    
-    menu:
-        "Pilih Chapter:"
-        
-        "Chapter 1: Umpan Pertama di Lapangan Senja":
-            jump chapter_1
-        
-        "Chapter 2: Bola yang Tidak Mau Diam" if chapter_clear >= 1:
-            jump chapter_2
-        
-        "Chapter 3: Sundulan Penentu" if chapter_clear >= 2:
-            jump chapter_3
-        
-        "Kembali ke Menu":
-            return
 
 # ============================================
 # LOAD CHAPTER FILES

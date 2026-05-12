@@ -1,5 +1,5 @@
 # ============================================
-# CHAPTER 3: Sundulan Penentu
+# BAB 3: Sundulan Penentu
 # ============================================
 # Materi: Teknik heading, permainan kecil, kerja sama tim, sportivitas
 
@@ -8,7 +8,7 @@ label ch3_intro:
     
     scene bg_black with fade
     
-    centered "{size=+10}{color=#4CAF50}Chapter 3{/color}{/size}\n{size=+5}Sundulan Penentu{/size}"
+    centered "{size=+10}{color=#4CAF50}Bab 3{/color}{/size}\n{size=+5}Sundulan Penentu{/size}"
     
     pause 2.0
     
@@ -466,7 +466,7 @@ label ch3_reflection:
     
     play music reflection_theme fadein 2.0
     
-    centered "{size=+10}Refleksi Chapter 3{/size}"
+    centered "{size=+10}Refleksi Bab 3{/size}"
     
     pause 1.0
     
@@ -490,12 +490,21 @@ label ch3_reflection:
     
     hide text with dissolve
     
-    centered "Chapter 3 Selesai!"
+    centered "Bab 3 Selesai!"
     
     pause 1.0
     
     # Tampilkan skor akhir
     call show_score_screen
+    
+    # Transisi ke ending
+    scene bg_black with fade
+    
+    pause 1.0
+    
+    centered "{size=+5}Perjalanan kita hampir selesai...{/size}"
+    
+    pause 2.0
     
     # Lanjut ke ending
     call game_ending
@@ -592,11 +601,25 @@ label credits_scene:
     
     pause 2.0
     
-    show text "{b}Beyond The Goal{/b}\n\nVisual Novel Edukasi Sepak Bola\n\n\nDibuat dengan Ren'Py\n\n\nTerima kasih telah bermain!\n\n\n{i}Terus berlatih, terus berkembang.{/i}" at truecenter
+    centered "{b}Beyond The Goal{/b}\n\nVisual Novel Edukasi Sepak Bola"
     
-    pause 5.0
+    pause 2.0
     
-    hide text
+    centered "{size=+5}Pengembang Game{/size}\n\n{b}Kristian Jonathan{/b}"
+    
+    pause 3.0
+    
+    centered "{i}\"Menang bukan hanya tentang mencetak gol,\ntapi tentang belajar, percaya diri,\ndan bermain bersama.\"{/i}"
+    
+    pause 3.0
+    
+    centered "Dibuat dengan Ren'Py\n\nVersion 1.0.0 - May 2026"
+    
+    pause 2.0
+    
+    centered "{size=+5}Terima kasih telah bermain!{/size}"
+    
+    pause 2.0
     
     # Kembali ke main menu
     return

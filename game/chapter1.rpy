@@ -1,5 +1,5 @@
 # ============================================
-# CHAPTER 1: Umpan Pertama di Lapangan Senja
+# BAB 1: Umpan Pertama di Lapangan Senja
 # ============================================
 # Materi: Dasar sepak bola, peran pemain, teknik menendang
 
@@ -8,7 +8,7 @@ label ch1_intro:
     
     scene bg_black with fade
     
-    centered "{size=+10}{color=#4CAF50}Chapter 1{/color}{/size}\n{size=+5}Umpan Pertama di Lapangan Senja{/size}"
+    centered "{size=+10}{color=#4CAF50}Bab 1{/color}{/size}\n{size=+5}Umpan Pertama di Lapangan Senja{/size}"
     
     pause 2.0
     
@@ -201,7 +201,7 @@ label ch1_scene_theory:
     return
 
 # ============================================
-# CHAPTER 1 MINIGAME: KICK SELECTOR QUIZ
+# BAB 1 MINI GAME: KICK SELECTOR QUIZ
 # ============================================
 label ch1_minigame:
     scene bg_black with fade
@@ -370,14 +370,14 @@ label ch1_quiz_result:
     return
 
 # ============================================
-# CHAPTER 1 REFLECTION
+# BAB 1 REFLEKSI
 # ============================================
 label ch1_reflection:
     scene bg_reflection with fade
     
     play music reflection_theme fadein 2.0
     
-    centered "{size=+10}Refleksi Chapter 1{/size}"
+    centered "{size=+10}Refleksi Bab 1{/size}"
     
     pause 1.0
     
@@ -408,6 +408,16 @@ label ch1_reflection:
     # Tampilkan skor
     call show_score_screen
     
+    # Transisi ke bab berikutnya
+    scene bg_black with fade
+    
+    pause 1.0
+    
+    centered "{size=+5}Bab 1 Selesai!{/size}\n\nLanjut ke Bab 2..."
+    
+    pause 2.0
+    
+    # Lanjut ke bab berikutnya
     return
 
 # ============================================
