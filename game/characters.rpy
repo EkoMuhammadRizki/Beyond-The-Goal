@@ -21,41 +21,67 @@ define dimas = Character("Dimas", color="#9C27B0", who_bold=True)
 define narrator = Character(None, kind=nvl)
 
 # ============================================
+# CHARACTER SPRITE TRANSFORMS
+# ============================================
+# Transform untuk menyeimbangkan ukuran visual karakter
+
+transform mc_sprite:
+    yalign 1.0
+    zoom 1.0
+
+transform coach_sprite:
+    yalign 1.0
+    zoom 1.08
+
+transform naya_sprite:
+    yalign 1.0
+    zoom 0.92
+
+transform bima_sprite:
+    yalign 1.0
+    zoom 0.95
+
+transform dimas_sprite:
+    yalign 1.0
+    zoom 1.0
+
+# ============================================
 # CHARACTER SPRITES
 # ============================================
 
 # Pemain Utama - Raka/Rani
-image mc neutral = "images/characters/mc_neutral.png"
-image mc senang = "images/characters/mc_senang.png"
-image mc marah = "images/characters/mc_marah.png"
-image mc sedih = "images/characters/mc_sedih.png"
-image mc fokus = "images/characters/mc_fokus.png"
-image mc takut = "images/characters/mc_takut.png"
+image mc neutral = At("images/characters/mc_neutral.png", mc_sprite)
+image mc senang = At("images/characters/mc_senang.png", mc_sprite)
+image mc marah = At("images/characters/mc_marah.png", mc_sprite)
+image mc sedih = At("images/characters/mc_sedih.png", mc_sprite)
+image mc fokus = At("images/characters/mc_fokus.png", mc_sprite)
+image mc takut = At("images/characters/mc_takut.png", mc_sprite)
 
 # Coach Arya
-image coach neutral = "images/characters/coach_neutral.png"
-image coach senang = "images/characters/coach_senang.png"
-image coach marah = "images/characters/coach_marah.png"
-image coach fokus = "images/characters/coach_fokus.png"
+image coach neutral = At("images/characters/coach_neutral.png", coach_sprite)
+image coach senang = At("images/characters/coach_senang.png", coach_sprite)
+image coach marah = At("images/characters/coach_marah.png", coach_sprite)
+image coach fokus = At("images/characters/coach_fokus.png", coach_sprite)
 
 # Naya
-image naya neutral = "images/characters/naya_neutral.png"
-image naya senang = "images/characters/naya_senang.png"
-image naya sedih = "images/characters/naya_sedih.png"
-image naya fokus = "images/characters/naya_fokus.png"
+image naya neutral = At("images/characters/naya_neutral.png", naya_sprite)
+image naya senang = At("images/characters/naya_senang.png", naya_sprite)
+image naya sedih = At("images/characters/naya_sedih.png", naya_sprite)
+image naya fokus = At("images/characters/naya_fokus.png", naya_sprite)
+image naya takut = At("images/characters/naya_takut.png", naya_sprite)
 
 # Bima
-image bima neutral = "images/characters/bima_neutral.png"
-image bima senang = "images/characters/bima_senang.png"
-image bima sedih = "images/characters/bima_sedih.png"
-image bima takut = "images/characters/bima_takut.png"
-image bima fokus = "images/characters/bima_fokus.png"
+image bima neutral = At("images/characters/bima_neutral.png", bima_sprite)
+image bima senang = At("images/characters/bima_senang.png", bima_sprite)
+image bima sedih = At("images/characters/bima_sedih.png", bima_sprite)
+image bima takut = At("images/characters/bima_takut.png", bima_sprite)
+image bima fokus = At("images/characters/bima_fokus.png", bima_sprite)
 
 # Dimas
-image dimas neutral = "images/characters/dimas_neutral.png"
-image dimas senang = "images/characters/dimas_senang.png"
-image dimas marah = "images/characters/dimas_marah.png"
-image dimas fokus = "images/characters/dimas_fokus.png"
+image dimas neutral = At("images/characters/dimas_neutral.png", dimas_sprite)
+image dimas senang = At("images/characters/dimas_senang.png", dimas_sprite)
+image dimas marah = At("images/characters/dimas_marah.png", dimas_sprite)
+image dimas fokus = At("images/characters/dimas_fokus.png", dimas_sprite)
 
 # ============================================
 # BACKGROUND IMAGES

@@ -43,11 +43,7 @@ label ch1_intro:
     
     coach "Ada tiga teknik dasar menendang yang harus kamu kuasai:"
     
-    show text "1. Kaki Bagian Dalam\n2. Kaki Bagian Luar\n3. Punggung Kaki" at truecenter with dissolve
-    
-    pause 2.0
-    
-    hide text with dissolve
+    centered "1. Kaki Bagian Dalam\n2. Kaki Bagian Luar\n3. Punggung Kaki"
     
     coach "Setiap teknik punya fungsi berbeda dalam permainan."
     

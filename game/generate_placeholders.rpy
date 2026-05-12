@@ -70,6 +70,7 @@ image naya_neutral_placeholder = Solid("#E91E63", xysize=(300, 600))
 image naya_senang_placeholder = Solid("#F06292", xysize=(300, 600))
 image naya_sedih_placeholder = Solid("#C2185B", xysize=(300, 600))
 image naya_fokus_placeholder = Solid("#D81B60", xysize=(300, 600))
+image naya_takut_placeholder = Solid("#880E4F", xysize=(300, 600))
 
 image bima_neutral_placeholder = Solid("#2196F3", xysize=(300, 600))
 image bima_senang_placeholder = Solid("#64B5F6", xysize=(300, 600))
@@ -105,124 +106,129 @@ init python:
             return placeholder_name
 
 # Override image definitions dengan fallback
-image mc neutral = ConditionSwitch(
+image mc neutral = At(ConditionSwitch(
     "renpy.loadable('images/characters/mc_neutral.png')", "images/characters/mc_neutral.png",
     "True", "mc_neutral_placeholder"
-)
+), mc_sprite)
 
-image mc senang = ConditionSwitch(
+image mc senang = At(ConditionSwitch(
     "renpy.loadable('images/characters/mc_senang.png')", "images/characters/mc_senang.png",
     "True", "mc_senang_placeholder"
-)
+), mc_sprite)
 
-image mc marah = ConditionSwitch(
+image mc marah = At(ConditionSwitch(
     "renpy.loadable('images/characters/mc_marah.png')", "images/characters/mc_marah.png",
     "True", "mc_marah_placeholder"
-)
+), mc_sprite)
 
-image mc sedih = ConditionSwitch(
+image mc sedih = At(ConditionSwitch(
     "renpy.loadable('images/characters/mc_sedih.png')", "images/characters/mc_sedih.png",
     "True", "mc_sedih_placeholder"
-)
+), mc_sprite)
 
-image mc fokus = ConditionSwitch(
+image mc fokus = At(ConditionSwitch(
     "renpy.loadable('images/characters/mc_fokus.png')", "images/characters/mc_fokus.png",
     "True", "mc_fokus_placeholder"
-)
+), mc_sprite)
 
-image mc takut = ConditionSwitch(
+image mc takut = At(ConditionSwitch(
     "renpy.loadable('images/characters/mc_takut.png')", "images/characters/mc_takut.png",
     "True", "mc_takut_placeholder"
-)
+), mc_sprite)
 
 # Coach
-image coach neutral = ConditionSwitch(
+image coach neutral = At(ConditionSwitch(
     "renpy.loadable('images/characters/coach_neutral.png')", "images/characters/coach_neutral.png",
     "True", "coach_neutral_placeholder"
-)
+), coach_sprite)
 
-image coach senang = ConditionSwitch(
+image coach senang = At(ConditionSwitch(
     "renpy.loadable('images/characters/coach_senang.png')", "images/characters/coach_senang.png",
     "True", "coach_senang_placeholder"
-)
+), coach_sprite)
 
-image coach marah = ConditionSwitch(
+image coach marah = At(ConditionSwitch(
     "renpy.loadable('images/characters/coach_marah.png')", "images/characters/coach_marah.png",
     "True", "coach_marah_placeholder"
-)
+), coach_sprite)
 
-image coach fokus = ConditionSwitch(
+image coach fokus = At(ConditionSwitch(
     "renpy.loadable('images/characters/coach_fokus.png')", "images/characters/coach_fokus.png",
     "True", "coach_fokus_placeholder"
-)
+), coach_sprite)
 
 # Naya
-image naya neutral = ConditionSwitch(
+image naya neutral = At(ConditionSwitch(
     "renpy.loadable('images/characters/naya_neutral.png')", "images/characters/naya_neutral.png",
     "True", "naya_neutral_placeholder"
-)
+), naya_sprite)
 
-image naya senang = ConditionSwitch(
+image naya senang = At(ConditionSwitch(
     "renpy.loadable('images/characters/naya_senang.png')", "images/characters/naya_senang.png",
     "True", "naya_senang_placeholder"
-)
+), naya_sprite)
 
-image naya sedih = ConditionSwitch(
+image naya sedih = At(ConditionSwitch(
     "renpy.loadable('images/characters/naya_sedih.png')", "images/characters/naya_sedih.png",
     "True", "naya_sedih_placeholder"
-)
+), naya_sprite)
 
-image naya fokus = ConditionSwitch(
+image naya fokus = At(ConditionSwitch(
     "renpy.loadable('images/characters/naya_fokus.png')", "images/characters/naya_fokus.png",
     "True", "naya_fokus_placeholder"
-)
+), naya_sprite)
+
+image naya takut = At(ConditionSwitch(
+    "renpy.loadable('images/characters/naya_takut.png')", "images/characters/naya_takut.png",
+    "True", "naya_takut_placeholder"
+), naya_sprite)
 
 # Bima
-image bima neutral = ConditionSwitch(
+image bima neutral = At(ConditionSwitch(
     "renpy.loadable('images/characters/bima_neutral.png')", "images/characters/bima_neutral.png",
     "True", "bima_neutral_placeholder"
-)
+), bima_sprite)
 
-image bima senang = ConditionSwitch(
+image bima senang = At(ConditionSwitch(
     "renpy.loadable('images/characters/bima_senang.png')", "images/characters/bima_senang.png",
     "True", "bima_senang_placeholder"
-)
+), bima_sprite)
 
-image bima sedih = ConditionSwitch(
+image bima sedih = At(ConditionSwitch(
     "renpy.loadable('images/characters/bima_sedih.png')", "images/characters/bima_sedih.png",
     "True", "bima_sedih_placeholder"
-)
+), bima_sprite)
 
-image bima takut = ConditionSwitch(
+image bima takut = At(ConditionSwitch(
     "renpy.loadable('images/characters/bima_takut.png')", "images/characters/bima_takut.png",
     "True", "bima_takut_placeholder"
-)
+), bima_sprite)
 
-image bima fokus = ConditionSwitch(
+image bima fokus = At(ConditionSwitch(
     "renpy.loadable('images/characters/bima_fokus.png')", "images/characters/bima_fokus.png",
     "True", "bima_fokus_placeholder"
-)
+), bima_sprite)
 
 # Dimas
-image dimas neutral = ConditionSwitch(
+image dimas neutral = At(ConditionSwitch(
     "renpy.loadable('images/characters/dimas_neutral.png')", "images/characters/dimas_neutral.png",
     "True", "dimas_neutral_placeholder"
-)
+), dimas_sprite)
 
-image dimas senang = ConditionSwitch(
+image dimas senang = At(ConditionSwitch(
     "renpy.loadable('images/characters/dimas_senang.png')", "images/characters/dimas_senang.png",
     "True", "dimas_senang_placeholder"
-)
+), dimas_sprite)
 
-image dimas marah = ConditionSwitch(
+image dimas marah = At(ConditionSwitch(
     "renpy.loadable('images/characters/dimas_marah.png')", "images/characters/dimas_marah.png",
     "True", "dimas_marah_placeholder"
-)
+), dimas_sprite)
 
-image dimas fokus = ConditionSwitch(
+image dimas fokus = At(ConditionSwitch(
     "renpy.loadable('images/characters/dimas_fokus.png')", "images/characters/dimas_fokus.png",
     "True", "dimas_fokus_placeholder"
-)
+), dimas_sprite)
 
 # Backgrounds
 image bg_school_field = ConditionSwitch(

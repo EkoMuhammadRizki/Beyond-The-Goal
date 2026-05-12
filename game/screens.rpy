@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Inisialisasi
 ################################################################################
 
@@ -129,6 +129,21 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
+style centered_text:
+    xalign 0.5
+    text_align 0.5
+    layout "subtitle"
+    color "#ffffff"
+
+style centered_window:
+    xalign 0.5
+    yalign 0.5
+    xfill False
+    background None
+    padding (40, 20, 40, 20)
+    xpadding 60
+    ypadding 30
+
 
 style window:
     xalign 0.5
@@ -206,11 +221,49 @@ style input:
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
 screen choice(items):
+    on "show" action [Hide("say"), Hide("nvl")]
     style_prefix "choice"
 
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
+    # Card Container (Glassmorphism Style)
+    frame:
+        background Solid("#ffffffcc") # Putih transparan premium
+        padding (50, 40, 50, 40)
+        xalign 0.5
+        yalign 0.55
+        xsize 1000 # Lebar kartu yang konsisten
+        
+        vbox:
+            spacing 25
+            xalign 0.5
+            
+            for i in items:
+                if i.action:
+                    textbutton i.caption action i.action:
+                        xalign 0.5
+                        text_xalign 0.5
+                        text_style "choice_button_text_custom"
+                else:
+                    # Teks Soal dalam Card
+                    text i.caption:
+                        style "choice_caption_text"
+                        xalign 0.5
+                        text_align 0.5
+
+
+style choice_caption_text:
+    size 38
+    color "#2c3e50" # Warna gelap elegan untuk soal
+    bold True
+    outlines [] # Hapus outline sesuai permintaan
+    xalign 0.5
+
+style choice_button_text_custom:
+    size 32
+    color "#4CAF50" # Hijau tema game
+    hover_color "#2E7D32"
+    bold False
+    outlines [] # Hapus outline sesuai permintaan
+    xalign 0.5
 
 
 style choice_vbox is vbox
@@ -219,10 +272,8 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
-    yanchor 0.5
-
-    spacing gui.choice_spacing
+    yalign 0.5
+    spacing 20
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
@@ -1377,7 +1428,7 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    background None
     padding gui.nvl_borders.padding
 
 style nvl_entry:

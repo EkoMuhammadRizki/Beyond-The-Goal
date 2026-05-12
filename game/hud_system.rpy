@@ -92,7 +92,7 @@ screen centered_text(text_content):
     frame:
         xalign 0.5
         yalign 0.5
-        background "#000000CC"
+        background None
         padding (50, 30)
         
         text text_content:

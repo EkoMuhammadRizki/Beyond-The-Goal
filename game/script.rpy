@@ -1,4 +1,4 @@
-﻿# ============================================
+# ============================================
 # BEYOND THE GOAL - Main Script
 # Visual Novel Edukasi Sepak Bola
 # ============================================
@@ -50,13 +50,9 @@ label opening_cinematic:
     scene bg_black with fade
     
     # Logo Game
-    show text "{size=+20}{color=#4CAF50}Beyond The Goal{/color}{/size}\n{size=-5}Menang bukan hanya tentang mencetak gol{/size}" at truecenter with dissolve
+    centered "{size=+20}{color=#4CAF50}Beyond The Goal{/color}{/size}\n{size=-5}Menang bukan hanya tentang mencetak gol{/size}"
     
     play music "audio/main_menu_theme.mp3" fadein 2.0
-    
-    pause 3.0
-    
-    hide text with dissolve
     
     return
 

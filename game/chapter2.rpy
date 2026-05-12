@@ -232,11 +232,7 @@ label ch2_minigame:
     # Soal 1
     scene bg_training_cone with dissolve
     
-    show text "Situasi 1:\nBola bergulir datar ke arahmu dengan kecepatan sedang." at truecenter
-    
-    pause 2.0
-    
-    hide text
+    centered "Situasi 1:\nBola bergulir datar ke arahmu dengan kecepatan sedang."
     
     menu:
         "Teknik kontrol apa yang kamu gunakan?"
@@ -246,17 +242,13 @@ label ch2_minigame:
             $ ch2_combo += 1
             $ add_teknik(10)
             play sound correct
-            show text "{color=#4CAF50}✓ BENAR!{/color}\n\nTelapak kaki sempurna untuk bola datar.\nCombo: [ch2_combo]" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ BENAR!{/color}\n\nTelapak kaki sempurna untuk bola datar.\nCombo: [ch2_combo]"
         
         "Dada":
             $ ch2_combo = 0
             play sound wrong
             with shake
-            show text "{color=#F44336}✗ SALAH{/color}\n\nDada untuk bola melayang tinggi, bukan bola datar.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ SALAH{/color}\n\nDada untuk bola melayang tinggi, bukan bola datar.\nCombo reset!"
         
         "Paha":
             $ ch2_combo = 0
@@ -267,11 +259,7 @@ label ch2_minigame:
             hide text
     
     # Soal 2
-    show text "Situasi 2:\nBola melayang tinggi menuju dadamu." at truecenter
-    
-    pause 2.0
-    
-    hide text
+    centered "Situasi 2:\nBola melayang tinggi menuju dadamu."
     
     menu:
         "Teknik kontrol apa yang kamu gunakan?"
@@ -280,9 +268,7 @@ label ch2_minigame:
             $ ch2_combo = 0
             play sound wrong
             with shake
-            show text "{color=#F44336}✗ SALAH{/color}\n\nTelapak kaki tidak bisa menjangkau bola tinggi.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ SALAH{/color}\n\nTelapak kaki tidak bisa menjangkau bola tinggi.\nCombo reset!"
         
         "Dada":
             $ ch2_quiz_score += 15
@@ -291,13 +277,10 @@ label ch2_minigame:
             play sound correct
             
             if ch2_combo >= 2:
-                show text "{color=#4CAF50}✓ BENAR!{/color}\n\n{color=#FFD700}★ COMBO BONUS! ★{/color}\nDada sempurna untuk bola melayang tinggi.\nCombo: [ch2_combo]" at truecenter
+                centered "{color=#4CAF50}✓ BENAR!{/color}\n\n{color=#FFD700}★ COMBO BONUS! ★{/color}\nDada sempurna untuk bola melayang tinggi.\nCombo: [ch2_combo]"
                 $ ch2_quiz_score += 10
             else:
-                show text "{color=#4CAF50}✓ BENAR!{/color}\n\nDada sempurna untuk bola melayang tinggi.\nCombo: [ch2_combo]" at truecenter
-            
-            pause 2.0
-            hide text
+                centered "{color=#4CAF50}✓ BENAR!{/color}\n\nDada sempurna untuk bola melayang tinggi.\nCombo: [ch2_combo]"
         
         "Paha":
             $ ch2_combo = 0
@@ -308,11 +291,7 @@ label ch2_minigame:
             hide text
     
     # Soal 3
-    show text "Situasi 3:\nBola melayang setinggi pinggang." at truecenter
-    
-    pause 2.0
-    
-    hide text
+    centered "Situasi 3:\nBola melayang setinggi pinggang."
     
     menu:
         "Teknik kontrol apa yang kamu gunakan?"
@@ -329,9 +308,7 @@ label ch2_minigame:
             $ ch2_combo = 0
             play sound wrong
             with shake
-            show text "{color=#F44336}✗ SALAH{/color}\n\nDada untuk bola lebih tinggi.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ SALAH{/color}\n\nDada untuk bola lebih tinggi.\nCombo reset!"
         
         "Paha":
             $ ch2_quiz_score += 15
@@ -340,20 +317,13 @@ label ch2_minigame:
             play sound correct
             
             if ch2_combo >= 3:
-                show text "{color=#4CAF50}✓ BENAR!{/color}\n\n{color=#FFD700}★★ PERFECT COMBO! ★★{/color}\nPaha sempurna untuk bola setinggi pinggang.\nCombo: [ch2_combo]" at truecenter
+                centered "{color=#4CAF50}✓ BENAR!{/color}\n\n{color=#FFD700}★★ PERFECT COMBO! ★★{/color}\nPaha sempurna untuk bola setinggi pinggang.\nCombo: [ch2_combo]"
                 $ ch2_quiz_score += 20
             else:
-                show text "{color=#4CAF50}✓ BENAR!{/color}\n\nPaha sempurna untuk bola setinggi pinggang.\nCombo: [ch2_combo]" at truecenter
-            
-            pause 2.0
-            hide text
+                centered "{color=#4CAF50}✓ BENAR!{/color}\n\nPaha sempurna untuk bola setinggi pinggang.\nCombo: [ch2_combo]"
     
     # Soal 4 - Dribbling
-    show text "Situasi 4:\nAda 3 cone di depanmu. Kamu harus melewatinya dengan dribbling." at truecenter
-    
-    pause 2.0
-    
-    hide text
+    centered "Situasi 4:\nAda 3 cone di depanmu. Kamu harus melewatinya dengan dribbling."
     
     menu:
         "Teknik dribbling apa yang kamu gunakan?"
@@ -363,32 +333,22 @@ label ch2_minigame:
             $ ch2_combo += 1
             $ add_teknik(10)
             play sound correct
-            show text "{color=#4CAF50}✓ BENAR!{/color}\n\nDribbling dengan kaki dalam-luar memberikan kontrol terbaik.\nCombo: [ch2_combo]" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ BENAR!{/color}\n\nDribbling dengan kaki dalam-luar memberikan kontrol terbaik.\nCombo: [ch2_combo]"
         
         "Tendangan keras lurus":
             $ ch2_combo = 0
             play sound wrong
             with shake
-            show text "{color=#F44336}✗ SALAH{/color}\n\nTendangan keras akan membuat bola lepas kontrol.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ SALAH{/color}\n\nTendangan keras akan membuat bola lepas kontrol.\nCombo reset!"
         
         "Hanya kaki kanan saja":
             $ ch2_quiz_score += 5
             $ ch2_combo = 0
             play sound wrong
-            show text "{color=#FFC107}△ KURANG EFEKTIF{/color}\n\nBisa, tapi kurang fleksibel. Gunakan kedua kaki.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#FFC107}△ KURANG EFEKTIF{/color}\n\nBisa, tapi kurang fleksibel. Gunakan kedua kaki.\nCombo reset!"
     
     # Soal 5
-    show text "Situasi 5:\nBola datang cepat ke arahmu, kamu harus segera mengontrol dan dribble." at truecenter
-    
-    pause 2.0
-    
-    hide text
+    centered "Situasi 5:\nBola datang cepat ke arahmu, kamu harus segera mengontrol dan dribble."
     
     menu:
         "Apa yang kamu lakukan?"
@@ -398,25 +358,19 @@ label ch2_minigame:
             $ ch2_combo += 1
             $ add_teknik(10)
             play sound correct
-            show text "{color=#4CAF50}✓ BENAR!{/color}\n\nKontrol dulu, baru dribble. Urutan yang tepat!\nCombo: [ch2_combo]" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ BENAR!{/color}\n\nKontrol dulu, baru dribble. Urutan yang tepat!\nCombo: [ch2_combo]"
         
         "Langsung dribble tanpa kontrol":
             $ ch2_combo = 0
             play sound wrong
             with shake
-            show text "{color=#F44336}✗ SALAH{/color}\n\nBola cepat harus dikontrol dulu sebelum dribble.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ SALAH{/color}\n\nBola cepat harus dikontrol dulu sebelum dribble.\nCombo reset!"
         
         "Tendang jauh ke depan":
             $ ch2_combo = 0
             play sound wrong
             with shake
-            show text "{color=#F44336}✗ SALAH{/color}\n\nItu bukan dribbling, bola akan lepas dari kontrolmu.\nCombo reset!" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ SALAH{/color}\n\nItu bukan dribbling, bola akan lepas dari kontrolmu.\nCombo reset!"
     
     # Hasil Quiz
     call ch2_quiz_result

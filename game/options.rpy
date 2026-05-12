@@ -1,4 +1,4 @@
-﻿## File ini berisi opsi yang dapat di ubah untuk mengkustomisasi game mu.
+## File ini berisi opsi yang dapat di ubah untuk mengkustomisasi game mu.
 ##
 ## Baris yang di awali dengan dua 'tanda '#' adalah komentar, dan kamu tidak
 ## seharusnya menghapus nya. Baris dengan satu '#' adalah kode yang di
@@ -109,6 +109,7 @@ define config.end_game_transition = None
 ## show", "window hide", dan "window auto".
 
 define config.window = "auto"
+define config.narrator_menu = False # Jangan tampilkan soal di textbox narator saat menu muncul
 
 
 ## Transisi yang digunakan untuk menunjukan dan menampilkan jendela dialog

@@ -42,11 +42,7 @@ label ch3_intro:
     
     coach "Yang penting adalah:"
     
-    show text "{b}Teknik Heading:{/b}\n\n1. Gunakan dahi, bukan ubun-ubun\n2. Mata tetap terbuka\n3. Leher kaku, gerakkan dari pinggang\n4. Timing yang tepat\n5. Jangan takut, percaya diri" at truecenter with dissolve
-    
-    pause 4.0
-    
-    hide text with dissolve
+    centered "{b}Teknik Heading:{/b}\n\n1. Gunakan dahi, bukan ubun-ubun\n2. Mata tetap terbuka\n3. Leher kaku, gerakkan dari pinggang\n4. Timing yang tepat\n5. Jangan takut, percaya diri"
     
     show dimas neutral at center with dissolve
     
@@ -221,18 +217,10 @@ label ch3_minigame:
     
     play sound whistle
     
-    show text "PERTANDINGAN DIMULAI!\nTim: [player_name] & Bima vs Dimas & Naya" at truecenter
-    
-    pause 2.0
-    
-    hide text
+    centered "PERTANDINGAN DIMULAI!\nTim: [player_name] & Bima vs Dimas & Naya"
     
     # Situasi 1
-    show text "Situasi 1:\nKamu menerima bola di tengah lapangan.\nBima bebas di sayap, tapi kamu juga punya peluang shooting." at truecenter
-    
-    pause 3.0
-    
-    hide text
+    centered "Situasi 1:\nKamu menerima bola di tengah lapangan.\nBima bebas di sayap, tapi kamu juga punya peluang shooting."
     
     menu:
         "Apa yang kamu lakukan?"
@@ -243,9 +231,7 @@ label ch3_minigame:
             $ add_sportivitas(10)
             $ supportive_points += 1
             play sound kick_ball
-            show text "{color=#4CAF50}✓ KERJA SAMA TIM!{/color}\n\nBima menerima bola dengan baik!\n+10 Teknik, +15 Sportivitas" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ KERJA SAMA TIM!{/color}\n\nBima menerima bola dengan baik!\n+10 Teknik, +15 Sportivitas"
         
         "Shooting sendiri":
             $ ch3_match_score += 5
@@ -253,25 +239,17 @@ label ch3_minigame:
             $ technical_points += 1
             play sound strong_kick
             with vpunch
-            show text "{color=#FFC107}△ EGOIS{/color}\n\nTendanganmu meleset. Bima terbuka tadi.\n+5 Teknik, +0 Sportivitas" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#FFC107}△ EGOIS{/color}\n\nTendanganmu meleset. Bima terbuka tadi.\n+5 Teknik, +0 Sportivitas"
         
         "Dribble melewati lawan":
             $ ch3_match_score += 8
             $ add_teknik(8)
             $ brave_points += 1
             play sound kick_ball
-            show text "{color=#4CAF50}✓ BERANI!{/color}\n\nKamu berhasil melewati satu lawan!\n+8 Teknik" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ BERANI!{/color}\n\nKamu berhasil melewati satu lawan!\n+8 Teknik"
     
     # Situasi 2
-    show text "Situasi 2:\nBola melayang tinggi ke arahmu.\nKamu bisa heading atau membiarkan Bima yang mengambil." at truecenter
-    
-    pause 3.0
-    
-    hide text
+    centered "Situasi 2:\nBola melayang tinggi ke arahmu.\nKamu bisa heading atau membiarkan Bima yang mengambil."
     
     menu:
         "Apa yang kamu lakukan?"
@@ -283,9 +261,7 @@ label ch3_minigame:
             $ brave_points += 1
             play sound kick_ball
             with vpunch
-            show text "{color=#4CAF50}✓ SEMPURNA!{/color}\n\nHeading-mu akurat!\n+15 Teknik, +10 Percaya Diri" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ SEMPURNA!{/color}\n\nHeading-mu akurat!\n+15 Teknik, +10 Percaya Diri"
         
         "Biarkan Bima yang heading":
             $ ch3_match_score += 10
@@ -293,9 +269,7 @@ label ch3_minigame:
             $ add_sportivitas(15)
             $ supportive_points += 2
             play sound kick_ball
-            show text "{color=#4CAF50}✓ PERCAYA TEMAN!{/color}\n\nBima berhasil heading! Dia senang kamu percaya padanya.\n+10 Teknik, +15 Sportivitas" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#4CAF50}✓ PERCAYA TEMAN!{/color}\n\nBima berhasil heading! Dia senang kamu percaya padanya.\n+10 Teknik, +15 Sportivitas"
         
         "Kontrol dengan dada":
             $ ch3_match_score += 8
@@ -326,22 +300,14 @@ label ch3_minigame:
         
         "Marah pada Dimas":
             $ ch3_sportivitas_score -= 10
-            show text "{color=#F44336}✗ TIDAK SPORTIF{/color}\n\nItu tidak sengaja. Kamu harus lebih tenang.\n-10 Sportivitas" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#F44336}✗ TIDAK SPORTIF{/color}\n\nItu tidak sengaja. Kamu harus lebih tenang.\n-10 Sportivitas"
         
         "Lanjutkan permainan":
             $ ch3_match_score += 5
-            show text "{color=#FFC107}△ FOKUS MENANG{/color}\n\nPermainan lanjut, tapi kamu kurang peduli teman.\n+5 Teknik, +0 Sportivitas" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#FFC107}△ FOKUS MENANG{/color}\n\nPermainan lanjut, tapi kamu kurang peduli teman.\n+5 Teknik, +0 Sportivitas"
     
     # Situasi 4
-    show text "Situasi 4:\nSkor 0-0, waktu hampir habis.\nKamu punya peluang emas untuk mencetak gol." at truecenter
-    
-    pause 3.0
-    
-    hide text
+    centered "Situasi 4:\nSkor 0-0, waktu hampir habis.\nKamu punya peluang emas untuk mencetak gol."
     
     menu:
         "Apa yang kamu lakukan?"
@@ -354,9 +320,7 @@ label ch3_minigame:
             play sound strong_kick
             with vpunch
             play sound crowd_small
-            show text "{color=#FFD700}★ GOOOAL! ★{/color}\n\nTendangan sempurna! Tim kalian menang!\n+15 Teknik, +10 Percaya Diri" at truecenter
-            pause 3.0
-            hide text
+            centered "{color=#FFD700}★ GOOOAL! ★{/color}\n\nTendangan sempurna! Tim kalian menang!\n+15 Teknik, +10 Percaya Diri"
         
         "Passing ke Bima untuk finishing":
             $ ch3_match_score += 12
@@ -368,17 +332,13 @@ label ch3_minigame:
             play sound strong_kick
             with vpunch
             play sound crowd_small
-            show text "{color=#FFD700}★ GOOOAL! ★{/color}\n\nBima mencetak gol! Kerja sama yang sempurna!\n+12 Teknik, +20 Sportivitas" at truecenter
-            pause 3.0
-            hide text
+            centered "{color=#FFD700}★ GOOOAL! ★{/color}\n\nBima mencetak gol! Kerja sama yang sempurna!\n+12 Teknik, +20 Sportivitas"
         
         "Dribble dulu untuk posisi lebih baik":
             $ ch3_match_score += 8
             $ add_teknik(8)
             play sound kick_ball
-            show text "{color=#FFC107}△ TERLAMBAT{/color}\n\nWaktu habis sebelum kamu shooting. Skor 0-0.\n+8 Teknik" at truecenter
-            pause 2.0
-            hide text
+            centered "{color=#FFC107}△ TERLAMBAT{/color}\n\nWaktu habis sebelum kamu shooting. Skor 0-0.\n+8 Teknik"
     
     # Hasil Match
     call ch3_match_result
@@ -484,11 +444,7 @@ label ch3_reflection:
     
     scene bg_black with fade
     
-    show text "{b}Ringkasan Pembelajaran:{/b}\n\n• Heading: Gunakan dahi, mata terbuka, timing tepat\n• Kerja sama tim lebih penting dari skill individu\n• Sportivitas: Peduli pada teman dan lawan\n• Keberanian mencoba hal baru\n\n{i}Menang bukan hanya tentang skor,\ntapi tentang bagaimana kita bermain bersama.{/i}" at truecenter
-    
-    pause 5.0
-    
-    hide text with dissolve
+    centered "{b}Ringkasan Pembelajaran:{/b}\n\n• Heading: Gunakan dahi, mata terbuka, timing tepat\n• Kerja sama tim lebih penting dari skill individu\n• Sportivitas: Peduli pada teman dan lawan\n• Keberanian mencoba hal baru\n\n{i}Menang bukan hanya tentang skor,\ntapi tentang bagaimana kita bermain bersama.{/i}"
     
     centered "Bab 3 Selesai!"
     
@@ -567,27 +523,19 @@ label player_growth_summary:
     
     pause 1.0
     
-    show text "{b}Perkembangan [player_name]:{/b}\n\n{color=#4CAF50}Teknik:{/color} [teknik_score]\n{color=#FF9800}Percaya Diri:{/color} [percaya_diri]\n{color=#2196F3}Sportivitas:{/color} [sportivitas]" at truecenter
-    
-    pause 4.0
-    
-    hide text
+    centered "{b}Perkembangan [player_name]:{/b}\n\n{color=#4CAF50}Teknik:{/color} [teknik_score]\n{color=#FF9800}Percaya Diri:{/color} [percaya_diri]\n{color=#2196F3}Sportivitas:{/color} [sportivitas]"
     
     # Tentukan player style
     $ player_style = get_player_style()
     
     if player_style == "technical":
-        show text "{b}Player Style:{/b}\n\n{color=#4CAF50}★ Technical Player ★{/color}\n\nKamu adalah pemain yang mengandalkan\npemahaman teknik dan strategi." at truecenter
+        centered "{b}Player Style:{/b}\n\n{color=#4CAF50}★ Technical Player ★{/color}\n\nKamu adalah pemain yang mengandalkan\npemahaman teknik dan strategi."
     elif player_style == "supportive":
-        show text "{b}Player Style:{/b}\n\n{color=#E91E63}★ Supportive Player ★{/color}\n\nKamu adalah pemain yang membuat\ntim menjadi lebih baik." at truecenter
+        centered "{b}Player Style:{/b}\n\n{color=#E91E63}★ Supportive Player ★{/color}\n\nKamu adalah pemain yang membuat\ntim menjadi lebih baik."
     elif player_style == "brave":
-        show text "{b}Player Style:{/b}\n\n{color=#FF9800}★ Brave Learner ★{/color}\n\nKamu adalah pemain yang berani\nmencoba dan belajar dari kesalahan." at truecenter
+        centered "{b}Player Style:{/b}\n\n{color=#FF9800}★ Brave Learner ★{/color}\n\nKamu adalah pemain yang berani\nmencoba dan belajar dari kesalahan."
     else:
-        show text "{b}Player Style:{/b}\n\n{color=#9C27B0}★ Balanced Captain ★{/color}\n\nKamu adalah pemain yang seimbang\ndalam semua aspek permainan." at truecenter
-    
-    pause 4.0
-    
-    hide text
+        centered "{b}Player Style:{/b}\n\n{color=#9C27B0}★ Balanced Captain ★{/color}\n\nKamu adalah pemain yang seimbang\ndalam semua aspek permainan."
     
     return
 
