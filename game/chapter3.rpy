@@ -1,5 +1,5 @@
 # ============================================
-# BAB 3: Sundulan Penentu
+# CHAPTER 3: Sundulan Penentu
 # ============================================
 # Materi: Teknik heading, permainan kecil, kerja sama tim, sportivitas
 
@@ -8,7 +8,7 @@ label ch3_intro:
     
     scene bg_black with fade
     
-    centered "{size=+10}{color=#4CAF50}Bab 3{/color}{/size}\n{size=+5}Sundulan Penentu{/size}"
+    centered "{size=+10}{color=#4CAF50}Chapter 3{/color}{/size}\n{size=+5}Sundulan Penentu{/size}"
     
     pause 2.0
     
@@ -44,17 +44,33 @@ label ch3_intro:
     
     centered "{b}Teknik Heading:{/b}\n\n1. Gunakan dahi, bukan ubun-ubun\n2. Mata tetap terbuka\n3. Leher kaku, gerakkan dari pinggang\n4. Timing yang tepat\n5. Jangan takut, percaya diri"
     
-    show dimas neutral at center with dissolve
+    # Sembunyikan karakter lain agar fokus ke Dimas dan tidak bertabrakan
+    hide mc
+    hide bima
+    hide coach
+    
+    # Tampilkan Dimas di kiri jauh agar tidak tertutup Coach
+    show dimas neutral at left with dissolve
     
     dimas "Aku sudah siap bertanding, Coach!"
     
-    show coach senang
+    # Tampilkan Coach di kanan jauh agar mereka berdialog berhadapan
+    show coach senang at right with dissolve
     
     coach "Bagus, Dimas! Tapi ingat, ini bukan hanya soal menang."
     
     coach "Ini tentang kerja sama tim dan sportivitas."
     
-    show mc fokus
+    # Munculkan semua karakter dalam posisi berbaris rapi tanpa tumpang tindih
+    show mc fokus:
+        xalign 0.0 yalign 1.0
+    show dimas neutral:
+        xalign 0.33 yalign 1.0
+    show coach neutral:
+        xalign 0.66 yalign 1.0
+    show bima takut:
+        xalign 1.0 yalign 1.0
+    with dissolve
     
     mc "Bima, aku akan bantu kamu belajar heading."
     
@@ -397,6 +413,11 @@ label ch3_match_result:
     
     naya "Kalian bermain dengan bagus!"
     
+    # Solusi 1: Sembunyikan karakter lain agar tidak bertabrakan dengan Coach di tengah
+    hide coach
+    hide bima
+    hide naya
+    
     show dimas senang at center with dissolve
     
     dimas "Pertandingan yang seru! Ayo main lagi kapan-kapan!"
@@ -426,7 +447,7 @@ label ch3_reflection:
     
     play music reflection_theme fadein 2.0
     
-    centered "{size=+10}Refleksi Bab 3{/size}"
+    centered "{size=+10}Refleksi Chapter 3{/size}"
     
     pause 1.0
     
@@ -446,7 +467,7 @@ label ch3_reflection:
     
     centered "{b}Ringkasan Pembelajaran:{/b}\n\n• Heading: Gunakan dahi, mata terbuka, timing tepat\n• Kerja sama tim lebih penting dari skill individu\n• Sportivitas: Peduli pada teman dan lawan\n• Keberanian mencoba hal baru\n\n{i}Menang bukan hanya tentang skor,\ntapi tentang bagaimana kita bermain bersama.{/i}"
     
-    centered "Bab 3 Selesai!"
+    centered "Chapter 3 Selesai!"
     
     pause 1.0
     

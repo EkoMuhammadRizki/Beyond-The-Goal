@@ -134,6 +134,7 @@ style centered_text:
     text_align 0.5
     layout "subtitle"
     color "#ffffff"
+    outlines [(2, "#00000088", 0, 0)] # Tambahkan shadow agar terbaca di latar terang
 
 style centered_window:
     xalign 0.5
@@ -224,43 +225,55 @@ screen choice(items):
     on "show" action [Hide("say"), Hide("nvl")]
     style_prefix "choice"
 
-    # Card Container (Glassmorphism Style)
-    frame:
-        background Solid("#ffffffcc") # Putih transparan premium
-        padding (50, 40, 50, 40)
+    vbox:
         xalign 0.5
-        yalign 0.55
-        xsize 1000 # Lebar kartu yang konsisten
-        
-        vbox:
-            spacing 25
-            xalign 0.5
-            
-            for i in items:
-                if i.action:
-                    textbutton i.caption action i.action:
-                        xalign 0.5
-                        text_xalign 0.5
-                        text_style "choice_button_text_custom"
-                else:
-                    # Teks Soal dalam Card
+        yalign 0.48
+        spacing 35 # Jarak antar kartu soal dan kartu jawaban
+
+        # 1. Kartu Soal (Bagian Atas)
+        for i in items:
+            if not i.action:
+                frame:
+                    background Solid("#0f172acc")
+                    padding (60, 35, 60, 35)
+                    xalign 0.5
+                    xsize 1100
+                    
                     text i.caption:
                         style "choice_caption_text"
                         xalign 0.5
                         text_align 0.5
 
+        # 2. Kartu Jawaban (Bagian Bawah)
+        frame:
+            background Solid("#0f172acc")
+            padding (50, 45, 50, 45)
+            xalign 0.5
+            xsize 1100
+            
+            vbox:
+                spacing 22
+                xalign 0.5
+                
+                for i in items:
+                    if i.action:
+                        textbutton i.caption action i.action:
+                            xalign 0.5
+                            text_xalign 0.5
+                            text_style "choice_button_text_custom"
+
 
 style choice_caption_text:
     size 38
-    color "#2c3e50" # Warna gelap elegan untuk soal
+    color "#f8fafc" # Warna terang untuk soal di atas latar gelap
     bold True
     outlines [] # Hapus outline sesuai permintaan
     xalign 0.5
 
 style choice_button_text_custom:
     size 32
-    color "#4CAF50" # Hijau tema game
-    hover_color "#2E7D32"
+    color "#cbd5e1" # Abu-abu terang untuk teks pilihan
+    hover_color "#ffffff" # Putih bersih untuk keterbacaan maksimal
     bold False
     outlines [] # Hapus outline sesuai permintaan
     xalign 0.5
@@ -276,7 +289,9 @@ style choice_vbox:
     spacing 20
 
 style choice_button is default:
-    properties gui.button_properties("choice_button")
+    background None
+    hover_background Solid("#f9731688") # Highlight orange transparan yang hangat
+    padding (10, 10, 10, 10)
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")

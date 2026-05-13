@@ -106,7 +106,7 @@ screen chapter_select_screen():
             xalign 0.5
             yalign 0.5
             
-            text "{size=+10}Pilih Bab{/size}" xalign 0.5 color "#4CAF50"
+            text "{size=+10}Pilih Chapter{/size}" xalign 0.5 color "#4CAF50"
             
             null height 20
             
@@ -166,7 +166,7 @@ screen chapter_select_screen():
                         vbox:
                             spacing 5
                             text "Bola yang Tidak Mau Diam" size 18 color "#666666"
-                            text "Selesaikan Bab 1 terlebih dahulu" size 14 color "#666666"
+                            text "Selesaikan Chapter 1 terlebih dahulu" size 14 color "#666666"
             
             # Chapter 3
             if chapter_clear >= 2:
@@ -204,7 +204,7 @@ screen chapter_select_screen():
                         vbox:
                             spacing 5
                             text "Sundulan Penentu" size 18 color "#666666"
-                            text "Selesaikan Bab 2 terlebih dahulu" size 14 color "#666666"
+                            text "Selesaikan Chapter 2 terlebih dahulu" size 14 color "#666666"
             
             null height 20
             
@@ -291,7 +291,7 @@ screen gallery_screen():
                                 text "• Kerja sama tim lebih penting dari skill individu" size 14
                     
                     if len(gallery_unlocked) == 0:
-                        text "Belum ada materi yang terbuka.\nSelesaikan bab untuk membuka materi." xalign 0.5 size 16 color "#AAAAAA"
+                        text "Belum ada materi yang terbuka.\nSelesaikan chapter untuk membuka materi." xalign 0.5 size 16 color "#AAAAAA"
             
             textbutton "Kembali" action [Hide("gallery_screen"), ShowMenu("main_menu")] xalign 0.5 xsize 200
 

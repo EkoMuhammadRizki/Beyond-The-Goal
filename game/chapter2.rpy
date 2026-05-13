@@ -1,5 +1,5 @@
 # ============================================
-# BAB 2: Bola yang Tidak Mau Diam
+# CHAPTER 2: Bola yang Tidak Mau Diam
 # ============================================
 # Materi: Kontrol bola, dribbling, kontrol telapak kaki/dada/paha
 
@@ -8,7 +8,7 @@ label ch2_intro:
     
     scene bg_black with fade
     
-    centered "{size=+10}{color=#4CAF50}Bab 2{/color}{/size}\n{size=+5}Bola yang Tidak Mau Diam{/size}"
+    centered "{size=+10}{color=#4CAF50}Chapter 2{/color}{/size}\n{size=+5}Bola yang Tidak Mau Diam{/size}"
     
     pause 2.0
     
@@ -215,7 +215,7 @@ label ch2_scene_dribbling:
     return
 
 # ============================================
-# BAB 2 MINI GAME: CONTROL & DRIBBLE MATCH
+# CHAPTER 2 MINI GAME: CONTROL & DRIBBLE MATCH
 # ============================================
 label ch2_minigame:
     scene bg_black with fade
@@ -426,14 +426,14 @@ label ch2_quiz_result:
     return
 
 # ============================================
-# BAB 2 REFLEKSI
+# CHAPTER 2 REFLEKSI
 # ============================================
 label ch2_reflection:
     scene bg_reflection with fade
     
     play music reflection_theme fadein 2.0
     
-    centered "{size=+10}Refleksi Bab 2{/size}"
+    centered "{size=+10}Refleksi Chapter 2{/size}"
     
     pause 1.0
     
@@ -464,14 +464,14 @@ label ch2_reflection:
     # Tampilkan skor
     call show_score_screen
     
-    # Transisi ke bab berikutnya
+    # Transisi ke chapter berikutnya
     scene bg_black with fade
     
     pause 1.0
     
-    centered "{size=+5}Bab 2 Selesai!{/size}\n\nLanjut ke Bab 3..."
+    centered "{size=+5}Chapter 2 Selesai!{/size}\n\nLanjut ke Chapter 3..."
     
     pause 2.0
     
-    # Lanjut ke bab berikutnya
+    # Lanjut ke chapter berikutnya
     return
