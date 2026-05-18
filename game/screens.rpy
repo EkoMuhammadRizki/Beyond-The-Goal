@@ -134,16 +134,16 @@ style centered_text:
     text_align 0.5
     layout "subtitle"
     color "#ffffff"
-    outlines [(2, "#00000088", 0, 0)] # Tambahkan shadow agar terbaca di latar terang
+    outlines [(2, "#000000aa", 1, 1)] # Tambahkan shadow agar terbaca di latar terang
+    line_spacing 15 # Jarak antar baris teks
 
 style centered_window:
     xalign 0.5
     yalign 0.5
     xfill False
-    background None
-    padding (40, 20, 40, 20)
-    xpadding 60
-    ypadding 30
+    background Frame("gui/button/choice_idle_background.png", gui.choice_button_borders, tile=gui.choice_button_tile)
+    padding (80, 40, 80, 40)
+    xminimum 1200
 
 
 style window:
@@ -234,7 +234,7 @@ screen choice(items):
         for i in items:
             if not i.action:
                 frame:
-                    background Solid("#0f172acc")
+                    background Frame("gui/button/choice_idle_background.png", gui.choice_button_borders, tile=gui.choice_button_tile)
                     padding (60, 35, 60, 35)
                     xalign 0.5
                     xsize 1100
@@ -245,22 +245,16 @@ screen choice(items):
                         text_align 0.5
 
         # 2. Kartu Jawaban (Bagian Bawah)
-        frame:
-            background Solid("#0f172acc")
-            padding (50, 45, 50, 45)
+        vbox:
+            spacing 22
             xalign 0.5
-            xsize 1100
             
-            vbox:
-                spacing 22
-                xalign 0.5
-                
-                for i in items:
-                    if i.action:
-                        textbutton i.caption action i.action:
-                            xalign 0.5
-                            text_xalign 0.5
-                            text_style "choice_button_text_custom"
+            for i in items:
+                if i.action:
+                    textbutton i.caption action i.action:
+                        xalign 0.5
+                        text_xalign 0.5
+                        text_style "choice_button_text_custom"
 
 
 style choice_caption_text:
@@ -289,9 +283,10 @@ style choice_vbox:
     spacing 20
 
 style choice_button is default:
-    background None
-    hover_background Solid("#f9731688") # Highlight orange transparan yang hangat
-    padding (10, 10, 10, 10)
+    background Frame("gui/button/choice_idle_background.png", gui.choice_button_borders, tile=gui.choice_button_tile)
+    hover_background Frame("gui/button/choice_idle_background.png", gui.choice_button_borders, tile=gui.choice_button_tile)
+    padding (15, 15, 15, 15)
+    xsize 1100 # Samakan lebar dengan kartu soal
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")

@@ -28,13 +28,8 @@ label hide_hud:
 # TRANSITIONS & EFFECTS
 # ============================================
 
-# Shake effect untuk jawaban salah
-transform shake:
-    linear 0.05 xoffset -5
-    linear 0.05 xoffset 5
-    linear 0.05 xoffset -5
-    linear 0.05 xoffset 5
-    linear 0.05 xoffset 0
+# Shake effect untuk jawaban salah (menggunakan vpunch sebagai transition)
+define shake = vpunch
 
 # Flash effect untuk jawaban benar
 transform flash:
